@@ -1,0 +1,41 @@
+{
+  "name": "bixby-x500",
+  "version": "0.0.0",
+  "description": "X.500 components for Bixby.js.",
+  "author": {
+    "name": "Jared Hanson",
+    "email": "jaredhanson@gmail.com",
+    "url": "http://www.jaredhanson.net/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bixbyjs/bixby-x500.git"
+  },
+  "bugs": {
+    "url": "http://github.com/bixbyjs/bixby-x500/issues"
+  },
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./app",
+  "assembly": {
+    "namespace": "http",
+    "components": [
+      "main"
+    ]
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "make-node": "^0.3.0",
+    "mocha": "^2.0.0",
+    "chai": "^3.0.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha test/*.test.js"
+  }
+}
