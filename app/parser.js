@@ -9,15 +9,15 @@ exports = module.exports = function(IoC, logger) {
       var components = IoC.components('http://i.bixbyjs.org/x500/Class');
     
       return Promise.all(components.map(function(comp) { return comp.create(); } ))
-        .then(function(prompts) {
-          prompts.forEach(function(prompt, i) {
+        .then(function(clazzes) {
+          clazzes.forEach(function(clazz, i) {
             var name = components[i].a['@name'];
             logger.info('Loaded X.500 class: ' + name);
-            //dispatcher.use(name, prompt.begin, prompt.resume, prompt.finish);
+            parser.class(name, clazz);
           });
         })
         .then(function() {
-          return dispatcher;
+          return parser;
         });
     })
     .then(function(parser) {

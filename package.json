@@ -29,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "utils-merge": "^1.0.1"
   },
   "devDependencies": {
     "make-node": "^0.3.0",
